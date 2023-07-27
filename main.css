@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+img {
+  display: block;
+  height: auto;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+  font-family: --, "Arial", sans-serif;
+  background-color: #fff;
+}
+
+.body-js {
+  background-color: black;
+}
+
+
+/* VISUALLY-HIDDEN */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* CONTAINER */
+.container {
+  width: 1240px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+/* STICKY-FOOTER */
+.site-main {
+  flex-grow: 1;
+}
+/* Swich button start */
+.switch-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.swich-input {
+  display: none;
+}
+
+.swich-input:checked + .swich-controller {
+  background-image: url("./images/switch.png");
+ 
+}
+
+.swich-input:checked + .swich-controller::before {
+  left: 320px;
+}
+
+.swich-controller {
+  position: relative;
+  display: inline-block;
+  width: 700px;
+  height: 400px;
+ background-image: url("./images/switchcar.png");
+ background-repeat: no-repeat;
+ background-size: 700px 400px;
+  border-radius: 300px;
+  transition: background-image 0.5s ease;
+}
+
+.swich-controller::before {
+  /* display: block; */
+  position: absolute;
+  background-color: #fff;
+  top: 25px;
+  left: 30px;
+  width: 350px;
+  height: 350px;
+ 
+
+  border-radius: 50%;
+  transition: left 0.5s ease;
+  content: "";
+}
